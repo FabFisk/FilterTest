@@ -8,11 +8,15 @@
 
 <h:head></h:head>
 <h:body>
-		<h:form>
-			<h:inputText value="#{loginController.username}"/>
-			<h:inputSecret value="#{loginController.password}"/>
-			<h:commandButton action=""/>
+<h:messages/>
+		<h:form id="form">
 		
+			<h:outputLabel>Username</h:outputLabel><br/>
+			<h:inputText label="Username" value="#{loginController.username}"/><br/>
+			<h:outputLabel>Password</h:outputLabel><br/>
+			<h:inputSecret label="Password" value="#{loginController.password}"/><br/>
+			<h:commandButton id="btn" value="entra" action="#{loginController.doLogin}"/>
+			
 		
 		
 		</h:form>
